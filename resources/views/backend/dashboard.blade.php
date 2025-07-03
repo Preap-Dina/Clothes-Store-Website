@@ -108,10 +108,10 @@
                               <tr>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Qty</th>   
-                                <th>Regular Price</th>
-                                <th>Sale Price</th>
-                                <th>Color</th>
+                                <th>Email</th>   
+                                <th>Role</th>
+                                <th>Member since</th>
+                                <th>Profile</th>
                               </tr>
                             </thead>
                             <tbody class="tab1b-border-bottom-8">
@@ -198,6 +198,7 @@
                               <tr>
                                 <th>ID</th>
                                 <th>Category Name</th>
+                                <th>Number of Product</th>
                               </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -205,6 +206,7 @@
                                 <tr>
                                   <td><strong>{{ $cate['id'] }}</strong></td>
                                   <td>{{ $cate['category_name'] }}</td>
+                                  <td>{{ $cate->products_count }}</td>
                                 </tr>
                               @endforeach
                             </tbody>

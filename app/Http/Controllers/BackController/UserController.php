@@ -60,17 +60,18 @@ class UserController extends Controller
     public function dashBoard(){
         if(Auth::user()->is_admin){
             $users = User::query()->paginate(7);
-            $cates = Category::query()->paginate(7);
+            $cates = Category::withCount('products')->paginate(7);
             $products = Product::query()
                     ->join('categories', 'products.cate_id', '=', 'categories.id')
                     ->join('users', 'products.user_id', '=', 'users.id')
                     ->select('products.*', 'categories.category_name as category', 'users.profile as profile')
                     ->paginate(7);
 
+            // $catesRelationship = Category::withCount('products')->get();
             $userCount = User::count();
             $cateCount = Category::count();
             $productCount = Product::count();
-            return view('backend.dashboard', compact('users', 'cates', 'products', 'userCount', 'cateCount', 'productCount'));
+            return view('backend.dashboard', compact('users', 'cates','products', 'userCount', 'cateCount', 'productCount'));
         }else{
             return redirect('/');
         }

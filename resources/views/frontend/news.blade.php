@@ -19,7 +19,7 @@
                             <figure>
                                 <div class="thumbnail">
                                     <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
+                                        <img src="/uploads/news.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="detail">
