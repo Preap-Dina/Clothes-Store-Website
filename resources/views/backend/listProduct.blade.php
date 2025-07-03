@@ -31,14 +31,14 @@
               <tbody class="tab1b-border-bottom-8">
                 @foreach ($products as $product)
                 <tr>
-                    <td><i class="tab fa-angular fa-lg text-danger me-3"></i> <strong>{{ $product->id }}</strong></td>
+                    <td> <strong>{{ $product->id }}</strong></td>
                     <td>{{ $product->product_name }}</td>
-                    <td>{{ $product->city }}</td>
+                    <td>{{ $product->qty }}</td>
                     <td>{{ $product->regular_price }}</td>
                     <td>{{ $product->sale_price }}</td>
                     <td>{{ $product->color }}</td>
                     <td>{{ $product->size }}</td>
-                    <td>{{ $product->value }}</td>
+                    <td>{{ $product->view }}</td>
                     <td>{{ $product->category }}</td>
                     <td>
                         <img width="40" src="{{ $product->profile }}" alt="Avatar" class="rounded-circle">

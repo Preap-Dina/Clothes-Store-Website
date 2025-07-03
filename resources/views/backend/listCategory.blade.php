@@ -22,7 +22,7 @@
               <tbody class="table-border-bottom-0">
                 @foreach ($category as $cate) 
                   <tr>
-                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{ $cate['id'] }}</strong></td>
+                    <td><strong>{{ $cate['id'] }}</strong></td>
                     <td>{{ $cate['category_name'] }}</td>
                     <td>
                       <div class="dropdown">
