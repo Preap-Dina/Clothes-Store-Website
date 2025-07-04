@@ -53,7 +53,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-footer">
-                    <input type="text" id="remove-val" name="remove-id">
+                    <input type="hidden" id="remove-val" name="remove-id">
                     <button type="submit" class="btn btn-danger">Confirm</button>
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
                   </div>

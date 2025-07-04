@@ -21,7 +21,7 @@
                         @endif
                         <div class="card-body">
                             @if ($getCate ?? '')
-                                <input type="text" name="hidden_id" id="hidden_id" value="{{ old('hidden_id', $getCate->id) }}">
+                                <input type="hidden" name="hidden_id" id="hidden_id" value="{{ old('hidden_id', $getCate->id) }}">
                             @endif
                             <div class="row">
                                 <div class="mb-3 col-6">
@@ -89,7 +89,7 @@
                                     <label for="formFile" class="form-label text-danger">Recommend image size ..x.. pixels.</label>
                                     <input class="form-control" type="file" name="image" />
                                     @if ($getCate ?? '')
-                                        <input type="text" id="old_image" name="old_image" value="{{ old('old_image', $getCate->image) }}">                                       
+                                        <input type="hidden" id="old_image" name="old_image" value="{{ old('old_image', $getCate->image) }}">                                       
                                     @endif
                                 </div>
                                 <div class="mb-3 col-12">
